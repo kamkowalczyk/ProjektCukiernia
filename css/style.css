@@ -1,0 +1,1456 @@
+:root {
+  --dark: #1e1f20;
+  --ldark: #171719;
+  --gold: #a68966;
+  --gold2: #a57766;
+  --gold_hover: #b57955;
+  --caramel: #854b32;
+  --bcaramel: #ddb892;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden !important;
+  font-family: "Lato", sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 10px;
+  height: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Nav */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px;
+  z-index: 10000;
+}
+.logo {
+  transition: 0.5s;
+  margin-left: -15px;
+}
+
+.logo img {
+  width: 220px;
+}
+
+nav.sticky {
+  background-color: var(--dark);
+  border-bottom: 1px solid var(--gold);
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5 ease-in;
+}
+.nav-links li {
+  list-style: none;
+  transition: 0.5s;
+}
+.nav-links li a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: 0.5s;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+  color: var(--bcaramel);
+}
+
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+  background-color: var(--gold);
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Header */
+
+.background-image {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/main_photo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.9;
+}
+header p {
+  color: var(--bcaramel);
+  font-size: 2rem;
+}
+
+.header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  color: #ddd;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 1px 0 #7a7a7a, 1px 1px 1px rgba(221, 184, 146, 0);
+  font-family: "Sedgwick Ave", cursive;
+  animation: text-animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.fa-chevron-down {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  font-size: 30px;
+  color: white;
+  animation: bounce 2s infinite both;
+}
+/* Strona głowna początek */
+/* Section1 */
+
+.first {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--dark);
+  border-top: 1px solid var(--gold);
+}
+.fone {
+  width: 100%;
+  min-height: 10%;
+  background-color: var(--dark);
+  border-top: 1px solid var(--gold);
+}
+.fone h2 {
+  margin: 0px auto -5px;
+  padding: 17px 0 0 0;
+  text-align: center;
+  color: white;
+  font-size: 2.4rem;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #7a7a7a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+
+.ozdoba1 {
+  width: 275px;
+  height: 3px;
+  background-color: var(--gold);
+  margin: 0 auto 15px;
+}
+
+.fcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--dark);
+  border-bottom: 1px solid var(--gold);
+  padding: 10px;
+}
+
+.produkty img {
+  width: 35%;
+}
+.produkty h2 {
+  color: white;
+  padding: 10px 0px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+.produkty p {
+  color: var(--gold);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.scontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+  min-height: 100%;
+  background-color: var(--dark);
+}
+.fsec {
+  flex-grow: 1;
+  width: 50%;
+  min-height: 100%;
+  background-color: var(--dark);
+  padding: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+.fsec h3 {
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px 0px 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+.fsec p {
+  color: var(--gold);
+  font-size: 1.8rem;
+  padding-bottom: 30px;
+  line-height: 42px;
+}
+button {
+  position: relative;
+  background: none;
+  color: var(--gold);
+  width: 240px;
+  height: 60px;
+  border: 1px solid var(--gold);
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.6s;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+button:focus {
+  outline: none;
+}
+button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5s;
+  filter: blur(30px);
+  transform: translateX(-130px) skewX(-15deg);
+}
+button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blue(30px);
+  transform: translate(-100px) scaleX(-15deg);
+}
+button:hover {
+  cursor: pointer;
+}
+button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: 0.7s;
+}
+button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: 0.7s;
+}
+.simage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  flex-grow: 1;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 20px 30px 20px 0;
+}
+.simage img {
+  width: 650px;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+}
+
+/* Section2 */
+.secound {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  min-height: 50vh;
+  background-color: var(--dark);
+  border-top: 1px solid var(--gold);
+}
+.secound h2 {
+  margin: 0px auto -5px;
+  padding: 17px 0 0 0;
+  text-align: center;
+  color: white;
+  font-size: 2.4rem;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #7a7a7a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+.sheader {
+  width: 100%;
+}
+.ozdoba2 {
+  width: 380px;
+  height: 3px;
+  background-color: var(--gold);
+  margin: 0 auto 15px;
+}
+.secound-container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 100vw;
+  min-height: 50vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url("..//images/sweets.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 70px 90px 70px 0;
+}
+
+.cytat-text {
+  background-color: rgba(10, 22, 26, 0.5);
+  width: 70%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.cytat-text h4 {
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px 0 0 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+.cytat-text p {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-align: right;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 20px;
+  text-shadow: 1px 1px 1px #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+
+/* */
+/* Section3 */
+.third {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  min-height: 90vh;
+  background-color: var(--dark);
+  border-top: 1px solid var(--gold);
+  padding: 20px 60px;
+}
+.tfirst {
+  flex-grow: 1;
+  width: 50%;
+  min-height: 100%;
+  background-color: var(--dark);
+  padding: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+.tfirst h3 {
+  color: white;
+  font-size: 2.4rem;
+  padding: 10px 0px 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+.tfirst p {
+  color: var(--gold);
+  font-size: 2.3rem;
+  padding-bottom: 30px;
+  line-height: 42px;
+}
+.timage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  flex-grow: 1;
+  width: 50%;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 20px 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  flex-grow: 1;
+  width: 50%;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 20px 20px 20px 0;
+}
+.timage img {
+  width: 600px;
+  height: 560px;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+  border-radius: 10px;
+  z-index: 1;
+}
+.tsec {
+  flex-grow: 1;
+  width: 50%;
+  min-height: 100%;
+  padding: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+.tsec h3 {
+  color: white;
+  font-size: 2.6rem;
+  padding: 10px 0px 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+}
+.tsec p {
+  color: var(--gold);
+  font-size: 2.3rem;
+  padding-bottom: 30px;
+  line-height: 42px;
+  font-family: "Lato", sans-serif;
+}
+/* Strona głowna koniec */
+/* O nas początek */
+.header_about {
+  height: 100vh;
+}
+.video-background {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  filter: brightness(65%);
+}
+
+.header_about h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.2rem;
+  color: white;
+  text-align: center;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+  text-transform: uppercase;
+  font-weight: 700;
+  animation: text-animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  flex-wrap: wrap;
+  max-width: 100vw;
+  min-height: 50vh;
+  padding: 40px 0;
+}
+
+.about-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 50%;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.about:nth-of-type(even) {
+  background-color: var(--ldark);
+}
+.about:nth-of-type(even) .history {
+  order: -1;
+  text-align: right;
+  padding: 10px 0 10px 70px;
+}
+.history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 50%;
+  min-height: 100%;
+  padding: 10px 80px 10px 0;
+  color: var(--gold);
+  font-size: 1.8rem;
+  line-height: 38px;
+}
+.about-photo img {
+  width: 450px;
+  height: 320px;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+}
+/* O nas koniec  */
+/* Nasza oferta- początek */
+.offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 140px 20px 20px 20px;
+}
+.offer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  overflow-y: hidden !important;
+}
+.offer-catch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.offer-catch > div {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+.offer-image img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(75%);
+  border-radius: 10px;
+}
+.offer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.offer-text h2 {
+  font-size: 2.4rem;
+  color: white;
+  text-align: center;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px 0 5px 0;
+}
+.offer-text p {
+  color: var(--gold);
+  font-size: 2rem;
+  line-height: 36px;
+  padding: 0 20px 10px 20px;
+}
+.offer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 105px;
+  width: 105px;
+  background-color: var(--gold);
+  border-radius: 50%;
+}
+.offer-icons img {
+  height: 70px;
+  width: 70px;
+}
+
+/* Nasza ofeta-koniec */
+/* Galeria-początek */
+.header-gallery {
+  max-width: 100vw;
+  min-height: 10vh;
+  text-align: center;
+  background-color: var(--dark);
+  padding: 140px 20px 20px 20px;
+}
+.header-gallery h3 {
+  font-size: 3rem;
+  color: white;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+  text-transform: uppercase;
+  font-weight: 700;
+  animation: text-animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.gallery {
+  max-width: 100vw;
+  min-height: 100vh;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 20px;
+  background-color: var(--dark);
+}
+.gallery > div {
+  flex-basis: 21%;
+  padding: 20px 0;
+}
+.gallery div img {
+  width: 320px;
+  height: 220px;
+  opacity: 0.9;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+}
+/* Galeria koniec */
+/* Kontakt-początek */
+.background-image-contact {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+    url("..//images/lody-sklep.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.9;
+}
+.contact-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  color: #ddd;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 1px 0 #7a7a7a, 1px 1px 1px rgba(221, 184, 146, 0);
+  font-family: "Sedgwick Ave", cursive;
+  animation: text-animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.contact {
+  max-width: 100vw;
+  min-height: 50vh;
+  display: flex;
+  background-color: var(--dark);
+  padding: 30px;
+}
+.contact-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--dark);
+  border: 1px solid var(--gold);
+  overflow-y: hidden !important;
+}
+.contact-map {
+  width: 50%;
+  height: 100%;
+  padding: 30px 15px 0 5px;
+}
+.contact-map iframe {
+  width: 100%;
+  height: 50%;
+}
+.map-text p {
+  font-size: 1.9rem;
+}
+.map-text {
+  color: var(--gold);
+  padding: 10px 0 30px 0;
+}
+.contact-form {
+  width: 50%;
+  min-height: 100%;
+  padding: 50px 15px 0 5px;
+}
+.contact-form-txt {
+  width: 100%;
+  height: 45px;
+  color: #000;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-family: "Lato", sans-serif;
+}
+.contact-form-textarea {
+  width: 100%;
+  height: 140px;
+  color: #000;
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-family: "Lato", sans-serif;
+}
+.contact-form-btn {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--gold);
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 0;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+.contact-informations {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  min-height: 50vh;
+  padding: 20px;
+  background-color: var(--dark);
+}
+.contact-informations > div {
+  width: 25%;
+  height: 100%;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  color: white;
+  font-family: "Sedgwick Ave", cursive;
+  text-shadow: 2px 1px 0 #5a5a5a, 1px 1px 1px rgba(221, 184, 146, 0);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.contact-info p {
+  text-align: left;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0 10px 10px 0;
+  font-weight: 500;
+}
+.contact-info p span {
+  color: var(--gold);
+  font-size: 1.7rem;
+  line-height: 36px;
+  padding: 0 0 10px 20px;
+}
+.contact-info i {
+  color: var(--gold);
+  font-size: 1.5rem;
+  padding-right: 5px;
+}
+.contact-info:nth-child(2) a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0 10px 10px 0;
+  font-weight: 500;
+}
+.contact-info:nth-child(2) p {
+  padding-top: 5px;
+}
+.contact-info:nth-child(3) a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0 10px 10px 0;
+  font-weight: 500;
+}
+.contact-info:nth-child(3) span {
+  padding: 0;
+}
+
+/* Kontakt-koniec */
+/* Footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  min-height: 8vh;
+  background-color: var(--dark);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  padding: 10px;
+  border-top: 1px solid var(--gold);
+}
+footer > div {
+  width: 50%;
+  height: 100%;
+}
+.footer-end {
+  padding-left: 30px;
+}
+.footer-end p {
+  color: var(--gold);
+}
+.social-links {
+  text-align: right;
+  padding-right: 30px;
+}
+.social-links a {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  background-color: var(--gold);
+  margin: 0 5px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  color: white;
+}
+
+/* Media */
+@media screen and (max-width: 1420px) {
+  .fsec p {
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+  }
+  .simage img {
+    width: 550px;
+    height: 400px;
+  }
+  .tfirst h3 {
+    font-size: 1.9rem;
+  }
+
+  .tsec h3 {
+    font-size: 1.9rem;
+  }
+  .tfirst p {
+    font-size: 1.8rem;
+  }
+  .tsec p {
+    font-size: 1.8rem;
+  }
+  .third {
+    padding: 0 70px 0 70px;
+  }
+  .timage img {
+    width: 520px;
+    height: 560px;
+  }
+  .footer {
+    min-height: 10vh;
+  }
+  .header-text-about h3 {
+    font-size: 2.8rem;
+  }
+  .history {
+    font-size: 1.5rem;
+  }
+  .offer-text p {
+    font-size: 1.4rem;
+  }
+  .contact-in {
+    height: 70%;
+  }
+  .contact-map {
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .logo img {
+    width: 190px;
+  }
+  nav {
+    padding: 20px 40px 20px 15px;
+    background-color: var(--dark);
+    border-bottom: 1px solid var(--gold);
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 10vh;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 50%;
+    transform: translateX(100%);
+  }
+  .nav-links li {
+    opacity: 0;
+    display: flex;
+  }
+  .nav-links li a {
+    font-size: 1.6rem;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+  .produkty {
+    width: 35%;
+    padding: 10px 0;
+  }
+  .produkty img {
+    width: 25%;
+  }
+  .fsec {
+    min-height: 30%;
+  }
+  .fsec p {
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+  }
+  .simage {
+    min-height: 50%;
+  }
+  .simage img {
+    width: 520px;
+    height: 380px;
+  }
+  .secound-container {
+    justify-content: center;
+    padding: 70px 0 70px 0;
+  }
+  .cytat-text {
+    align-items: center;
+  }
+  .cytat-text p {
+    text-align: center;
+  }
+  .tfirst {
+    padding-bottom: 0;
+  }
+  .tfirst h3 {
+    font-size: 1.7rem;
+    padding-left: 40px;
+  }
+  .tsec h3 {
+    font-size: 1.7rem;
+    padding-right: 20px;
+  }
+  .tfirst p {
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .tsec p {
+    font-size: 1.4rem;
+    padding-right: 20px;
+  }
+  .timage img {
+    width: 520px;
+    height: 540px;
+  }
+  .about-photo img {
+    width: 430px;
+    height: 300px;
+  }
+  .history {
+    font-size: 1.2rem;
+  }
+  .offer-text p {
+    font-size: 1rem;
+  }
+  .offer-text h2 {
+    font-size: 2.1rem;
+  }
+  .offer-icons {
+    width: 100px;
+    height: 100px;
+  }
+  .offer-icons img {
+    width: 60px;
+    height: 60px;
+  }
+  .map-text p {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo img {
+    width: 170px;
+  }
+  nav {
+    padding: 20px 30px 20px 15px;
+  }
+
+  .fa-chevron-down {
+    left: 48%;
+  }
+  .produkty img {
+    width: 30%;
+  }
+  .fsec h3 {
+    font-size: 1.8rem;
+  }
+  .simage {
+    padding: 0 0 60px;
+  }
+  .simage img {
+    width: 510px;
+    height: 300px;
+  }
+  .cytat-text h4 {
+    font-size: 1.8rem;
+  }
+  .third {
+    justify-content: center;
+    padding: 10px 0 0 0;
+  }
+  .tfirst {
+    width: 100%;
+    order: -1;
+    padding-bottom: 0;
+  }
+  .tfirst h3 {
+    font-size: 1.9rem;
+    padding: 0 20px 20px 20px;
+  }
+  .tfirst p {
+    font-size: 1.4rem;
+    padding: 0 20px 20px 20px;
+  }
+  .tsec {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .tsec h3 {
+    font-size: 1.9rem;
+    padding: 0 20px 20px 20px;
+  }
+  .tsec p {
+    padding: 0 20px 20px 20px;
+    font-size: 1.4rem;
+  }
+  .timage {
+    padding: 0;
+  }
+  .timage img {
+    width: 480px;
+    height: 500px;
+  }
+  .header-text-about h3 {
+    font-size: 2rem;
+  }
+  .about-photo {
+    width: 100%;
+  }
+  .history {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3rem;
+  }
+  .about:nth-of-type(even) .history {
+    order: 1;
+    text-align: center;
+    padding: 20px;
+  }
+  .offer-catch > div {
+    width: 100%;
+  }
+  .offer-image:nth-of-type(1) {
+    order: 1;
+  }
+  .offer-image:nth-of-type(2) {
+    order: 1;
+  }
+  .offer-text:nth-of-type(1) {
+    order: 1;
+  }
+  .offer-text p {
+    font-size: 1.6rem;
+  }
+  .offer-text h2 {
+    font-size: 2.4rem;
+  }
+  .offer-container {
+    padding-bottom: 0;
+  }
+  .offer-image {
+    padding: 10px 0;
+  }
+  .offer-icons {
+    width: 120px;
+    height: 120px;
+  }
+  .offer-icons img {
+    width: 80px;
+    height: 80px;
+  }
+  .gallery > div {
+    flex-basis: 50%;
+    padding: 40px;
+  }
+  .map-text {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .contact-in {
+    flex-wrap: wrap;
+    min-height: 100%;
+  }
+  .contact-in > div {
+    width: 100%;
+  }
+  .contact-map {
+    height: auto;
+    padding: 10px;
+  }
+  .contact-form {
+    height: auto;
+    padding: 10px 10px 20px 10px;
+  }
+  .contact-background {
+    font-size: 3.6rem;
+    padding: 0 50px;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  .contact-info:nth-child(2) {
+    text-align: center;
+  }
+  .contact-info h2 {
+    padding-top: 10px;
+  }
+  .contact-info p {
+    text-align: center;
+  }
+  .contact-informations > div {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 160px;
+  }
+  .fa-chevron-down {
+    left: 48%;
+  }
+  .header-text {
+    font-size: 1.5rem;
+  }
+  .nav-links li a {
+    font-size: 1.3rem;
+  }
+
+  .fsec p {
+    line-height: 38px;
+  }
+  button {
+    width: 220px;
+    height: 60px;
+  }
+  .simage {
+    padding-bottom: 80px;
+  }
+  .simage img {
+    width: 430px;
+    height: 310px;
+  }
+  .produkty {
+    width: 65%;
+  }
+  .cytat-text h4 {
+    font-size: 1.6rem;
+  }
+  .tfirst h3 {
+    font-size: 1.8rem;
+  }
+  .tfirst p {
+    font-size: 1.3rem;
+  }
+  .tsec h3 {
+    font-size: 1.8rem;
+  }
+  .tsec p {
+    font-size: 1.3rem;
+  }
+  .third {
+    padding-bottom: 20px;
+  }
+
+  .timage img {
+    width: 390px;
+    height: 420px;
+  }
+  .footer-end {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 8px;
+  }
+  .social-links {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+  .header-text-about h3 {
+    font-size: 2.1rem;
+  }
+  .offer-text p {
+    font-size: 1.3rem;
+  }
+  .offer-text h2 {
+    font-size: 2.2rem;
+  }
+  .header-gallery h3 {
+    font-size: 2.5rem;
+  }
+  .gallery > div {
+    padding: 10px;
+  }
+  .map-text p {
+    font-size: 1.6rem;
+  }
+  .header-text {
+    animation: none;
+  }
+  .video-about h3 {
+    animation: none;
+  }
+  .header .header-gallery h3 {
+    animation: none;
+  }
+  .contact-background {
+    font-size: 3.3rem;
+    animation: none;
+  }
+  .contact-info h2 {
+    padding-top: 30px;
+  }
+  .contact-informations > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .logo img {
+    width: 150px;
+  }
+  .fa-chevron-down {
+    left: 46%;
+  }
+  .header-text {
+    font-size: 1.3rem;
+  }
+  nav {
+    padding: 20px 10px 20px 15px;
+  }
+  .burger {
+    padding-right: 15px;
+  }
+  .produkty img {
+    width: 31%;
+  }
+  .produkty p {
+    font-size: 1rem;
+  }
+  .fsec h3 {
+    font-size: 1.7rem;
+  }
+  .fsec p {
+    font-size: 1.3rem;
+  }
+  button {
+    width: 215px;
+    height: 55px;
+  }
+  .simage {
+    min-height: 30%;
+    padding-bottom: 50px;
+  }
+  .simage img {
+    width: 340px;
+    height: 220px;
+  }
+  .cytat-text h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .cytat-text p {
+    font-size: 0.9rem;
+  }
+
+  .timage img {
+    width: 330px;
+    height: 380px;
+  }
+  .about-photo img {
+    width: 340px;
+    height: 230px;
+  }
+  .history {
+    font-size: 1.2rem;
+  }
+  .offer-container {
+    padding: 10px;
+  }
+
+  .offer-text p {
+    font-size: 1.1rem;
+  }
+  .gallery > div {
+    flex-basis: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .map-text p {
+    font-size: 1.5rem;
+  }
+  .contact-background h2 {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-aspect-ratio: 16/9) {
+  .video-background > video {
+    height: 100%;
+    width: auto;
+  }
+}
+@media screen and (min-aspect-ratio: 1920/1080) {
+  .video-background > video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Animacje */
+@keyframes navLinkFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
